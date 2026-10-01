@@ -1,4 +1,30 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RYVEN GAMES</title><style>body{margin:0;background:#05070b;color:#fff;font:16px Arial;display:grid;place-items:center;height:100vh;text-align:center}h1{color:#52d9ff}</style></head>
-<body><div><h1>GAME BUILD</h1><p>Replace this file with the actual game build.</p><p><a href="../../index.html" style="color:#52d9ff">← Back to RYVEN GAMES</a></p></div></body></html>
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>SCHOOL LIFE 3D — V8.0</title><link rel="stylesheet" href="css/style.css"><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<style>
+.startupSplash{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+.startupBlack{background:#000;}
+.startupCredit{background:#178fe6;opacity:0;}
+.startupCredit div{color:#000;font-size:clamp(28px,4vw,54px);font-weight:900;letter-spacing:.5px;text-align:center;}
+</style>
+</head><body>
+<div id="loading"><div><div class="loadLogo">🏫</div><b>SCHOOL LIFE 3D — V8.0</b><span>در حال آماده‌سازی…</span></div></div>
+<div id="splashBlack" class="startupSplash startupBlack"><div></div></div>
+<div id="splashCredit" class="startupSplash startupCredit"><div>ساخته شده توسط دیان</div></div>
+<div id="menu"><div class="menuBackdropLogo">SCHOOL<br><span>LIFE 3D</span></div><div class="menuGlow"></div><div class="menuCard menuCardLeft"><div id="menuHome"><div class="menuBrand"><div class="schoolIcon">🏫</div><div><small>SCHOOL LIFE 3D</small><div class="version">V8.9 • HIGH GRAPHICS</div></div></div><div class="menuList"><button id="start" class="primary">▶ شروع بازی</button><button id="menuSettings">⚙️ تنظیمات</button><button id="menuAbout">ℹ️ درباره بازی</button></div><div class="menuHint">یک روز مدرسه، کلاس، زنگ تفریح و فوتبال سه‌به‌سه</div></div><div id="menuSettingsPanel" hidden><div class="menuPanelTitle">⚙️ تنظیمات</div><div class="menuPanelSub">همین‌جا داخل منو تنظیمات را عوض کن</div><div id="menuQuality" class="menuQuality"><button data-q="low">کم</button><button data-q="medium">متوسط</button><button data-q="high" class="active">بالا</button></div><div class="menuSettingInfo">🎨 کیفیت بالا: سایه‌های دقیق‌تر، وضوح بیشتر و جزئیات بهتر<br>🏃 قد کاراکتر: ۱٫۳۹ متر</div><button id="menuBack" class="menuBack">↩️ برگشت به منو</button></div><div id="menuAboutPanel" hidden><div class="menuPanelTitle">🏫 درباره بازی</div><div class="menuSettingInfo">SCHOOL LIFE 3D یک بازی مدرسه‌ای سه‌بعدی است؛ با برنامه هفتگی، کلاس، تکلیف، امتحان، زنگ تفریح و فوتبال سه‌به‌سه.</div><button id="aboutBack" class="menuBack">↩️ برگشت به منو</button></div></div></div>
+<canvas id="c"></canvas><div id="hud"><div class="pill">🕒 <span id="clock">۰۸:۰۰</span></div><div class="pill">⭐ <span id="score">۰</span></div><div id="objective" class="objective">🎯 به سمت مدرسه برو</div><div class="hudBtns"><button id="speedBtn" title="سرعت">🏃</button><button id="schedule">📅</button><button id="report">📋</button><button id="settings">⚙️</button><button id="save">💾</button></div></div>
+<div id="mobileRun">🏃</div><div id="act" hidden></div><div id="joy"><div id="knob"></div></div><div id="modal" hidden><div id="box"></div></div><div id="fade"></div><script type="module" src="js/main.js"></script><script>
+window.addEventListener('load',()=>{
+  const black=document.getElementById('splashBlack');
+  const credit=document.getElementById('splashCredit');
+  const menu=document.getElementById('menu');
+  if(menu) menu.style.display='none';
+  setTimeout(()=>{
+    black.style.display='none';
+    credit.style.opacity='1';
+  },4000);
+  setTimeout(()=>{
+    credit.style.display='none';
+    if(menu) menu.style.display='';
+  },7000);
+});
+</script>
+</body></html>
